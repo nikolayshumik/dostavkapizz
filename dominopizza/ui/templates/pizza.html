@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hi choose any pizza you want</p>
+<ul>
+  {% for pizza in pizzas %}
+    <li>
+      {{ pizza.name }} - {{ pizza.price }}
+      <a href="/order/{{ pizza.id }}">Купить</a>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
