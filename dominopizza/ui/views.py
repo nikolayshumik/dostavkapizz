@@ -21,3 +21,7 @@ def order(request, pizza_id):
 
 def order_complete(request):
     return render(request, 'order_complete.html')
+
+def cookers(request):
+    orders = Order.objects.all()
+    return render(request, 'cookers.html', {'orders': orders})

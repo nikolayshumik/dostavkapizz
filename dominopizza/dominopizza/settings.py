@@ -82,8 +82,8 @@ DATABASES = {
 }
 
 
-CELERY_BROKER_URL = 'redis://<linux_ip_address>:6379/0'
-CELERY_RESULT_BACKEND = 'redis://<linux_ip_address>:6379/0'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

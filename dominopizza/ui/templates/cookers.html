@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Подтвержденные заказы</p>
+{% for order in orders %}
+  {% if order.status == "подтвержден" %}
+
+        <p>{{ order.pizza.name }} - Order ID: {{ order.id }} - <a href="#">{{ order.status }}</a></p>
+
+  {% endif %}
+{% empty %}
+  <p>Пока нет подтвержденных заказов</p>
+{% endfor %}
+
+<p>Не подтвержденные заказы</p>
+{% for order in orders %}
+  {% if order.status != "подтвержден" %}
+
+      <p>{{ order.pizza.name }} - Order ID: {{ order.id }} - {{ order.status }}</p>
+
+  {% endif %}
+{% empty %}
+  <p>Пока нет не подтвержденных заказов</p>
+{% endfor %}
+
+</body>
+</html>

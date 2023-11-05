@@ -3,6 +3,8 @@ from .import views
 
 urlpatterns = [
     path('pizza/', views.pizza, name='pizza'),
+    path('cookers/', views.cookers, name='cookers'),
+    path('pizza/', views.pizza, name='pizza'),
     path('order/<int:pizza_id>/', views.order, name='order'),
     path('order/complete/', views.order_complete, name='order_complete'),
 ]

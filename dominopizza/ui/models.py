@@ -12,6 +12,7 @@ class Order(models.Model):
     lastname = models.CharField(max_length=255)
     number = models.IntegerField()
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
+    status = models.CharField(max_length=100, default="не подтвержден")
 
 
     def __str__(self):
